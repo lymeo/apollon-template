@@ -1,4 +1,4 @@
-export default async function({Query}){
+export default async function(){
     
-    Query.hello = _ => "Hello world"
+    this.Query.hello = _ => "Hello world"
 }
