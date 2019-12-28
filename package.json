@@ -14,7 +14,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@lymeodev/apollon": "^2.0.0-1",
-    "@lymeodev/apollon-plugin-upload": "git+https://github.com/lymeo/apollon-plugin-upload.git"
+    "@lymeodev/apollon": "^2.0.0"
   }
 }
