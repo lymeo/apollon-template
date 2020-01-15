@@ -1,3 +1,3 @@
-import { start, setConfig, setRootFromUrl, config } from "@lymeodev/apollon";
+import { start, setRootFromUrl } from "@lymeodev/apollon";
 
 start.fromUrl(import.meta.url);
