@@ -1,5 +1,5 @@
 {
-  "name": "apollon",
+  "name": "apollon-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,15 @@
     "start": "node index.js",
     "build": "env APOLLON_ENV='BUILD' node index.js",
     "prod": "env APOLLON_ENV='PROD' node index.js",
-    "dev": "env LOG_LEVEL='TRACE' node index.js | bunyan",
-    "nodemon": "env LOG_LEVEL='TRACE' nodemon -e js,mjs,cjs,gql,yaml,json ./index.js | bunyan"
+    "dev": "env LOG_LEVEL='DEBUG' node index.js | bunyan",
+    "nodemon": "env LOG_LEVEL='DEBUG' nodemon -e js,mjs,cjs,gql,yaml,json ./index.js | bunyan",
+    "dev-docker-build": "docker build --file Dockerfile.dev -t apollon/$(basename $(pwd)):dev .",
+    "dev-docker": "docker run --rm -v $(pwd):/apollon apollon/$(basename $(pwd)):dev",
+    "docker-build": "docker build --file Dockerfile -t apollon/$(basename $(pwd)) ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@lymeodev/apollon": "^2.0.0"
+    "@lymeodev/apollon": "^2.5.6"
   }
 }
